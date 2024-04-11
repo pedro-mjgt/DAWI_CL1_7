@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class JubilacionModel {
 
-    private String genero;
+    private String sexo;
     private int edad;
 
 }
