@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Calculadora</h1>
+    <form action="/calcular" method="post">
+        <div class="form-row">
+            <div class="col">
+                <input type="number" class="form-control" placeholder="Límite Inferior (15)" name="limiteInferior" required>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" placeholder="Límite Superior (70)" name="limiteSuperior" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Calcular</button>
+    </form>
+</div>
+</body>
+</html>
