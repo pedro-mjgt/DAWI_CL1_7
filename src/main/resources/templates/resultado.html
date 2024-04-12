@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Resultados de la Calculadora</h1>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Cuadrado</th>
+                    <th>Mitad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="resultado : ${resultados}">
+                    <td th:text="${resultado.numero}"></td>
+                    <td th:text="${resultado.cuadrado}"></td>
+                    <td th:text="${resultado.mitad}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
