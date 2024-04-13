@@ -13,7 +13,7 @@
             <div class="card-body">
                 <form th:action="@{/jubilacion}" method="post" th:object="${jubilacionModel}">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="txtsexo" placeholder="M o F" th:field="*{sexo}" required>
+                        <input type="text" class="form-control" id="txtsexo" placeholder="H o M" th:field="*{sexo}" required>
                         <label for="txtsexo">Sexo</label>
                     </div>
                     <div class="form-floating">

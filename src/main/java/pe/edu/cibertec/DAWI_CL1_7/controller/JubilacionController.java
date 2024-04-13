@@ -24,13 +24,13 @@ public class JubilacionController {
         int edad = jubilacionModel.getEdad();
         String resultado = "";
 
-        if (sexo.equals("M")) {
+        if (sexo.equals("H")) {
             if (edad >= 60) {
                 resultado = "Usted puede jubilarse";
             } else {
                 resultado = "Usted no puede jubilarse";
             }
-        } else if (sexo.equals("F")) {
+        } else if (sexo.equals("M")) {
             if (edad >= 55) {
                 resultado = "Usted puede jubilarse";
             } else {
