@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="layout::head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head >
+<body>
+<nav th:replace="layout::menu"></nav>
+<div class="card">
+    <div class="card-header text-bg-success">
+        CALCULAR EL MENOR DE LOS NÚMEROS
+    </div>
+    <div class="card-body">
+        <form th:action="@{/menor}" method="post" th:object="${menorModel}">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txta"
+                       placeholder="name@example.com" th:field="*{a}">
+                <label for="txta">⬇INGRESE PRIMER NÚMERO ⬇</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txtb"
+                       placeholder="name@example.com" th:field="*{b}">
+                <label for="txtb">⬇INGRESE SEGUNDO NÚMERO ⬇</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txtc"
+                       placeholder="name@example.com" th:field="*{c}">
+                <label for="txtc">⬇INGRESE TERCER NÚMERO ⬇</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txtd"
+                       placeholder="name@example.com" th:field="*{d}">
+                <label for="txtd">⬇INGRESE CUARTO NÚMERO ⬇</label>
+            </div>
+            <hr/>
+            <button type="submit" class="btn btn-success">CALCULAR</button>
+            <div th:if="${mostrarMensaje}" class="alert alert-success" role="alert">
+                <samp th:text="${resultado} ?: ''"></samp>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
